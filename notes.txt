@@ -1,0 +1,8 @@
+FLASK_APP=app.py
+
+FLASK_ENV=development 
+    debugger on
+    autoreloader on
+    debug on for app
+
+FLASK_DEBUG=1
