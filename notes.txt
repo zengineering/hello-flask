@@ -6,3 +6,11 @@ FLASK_ENV=development
     debug on for app
 
 FLASK_DEBUG=1
+
+Applications can be modules or packages.
+
+Templating is done via Jinja2.
+
+Unit testing: request object needed (and bound to context)
+    - easiest via with app.test_request_context(...)
+    - also app.request_context(<WSGI environ>)
