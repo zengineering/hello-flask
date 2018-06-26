@@ -1,4 +1,4 @@
-from flask import( Blueprint, flash, g, redirect, render_template, request, url_for)
+from flask import (Blueprint, flash, g, redirect, render_template, request, url_for)
 from werkzeug.exceptions import abort
 from flaskr.auth import login_required
 from flaskr.db import get_db
@@ -25,7 +25,7 @@ def create():
         error = None
 
         if not title:
-            error = "Title is required"
+            error = "Title is required."
         if error is not None:
             flash(error)
         else:
@@ -64,7 +64,9 @@ def update(id):
         error = None
 
         if not title:
-            error = "Title is required"
+            error = "Title is required."
+        if error is not None:
+            flash(error)
         else:
             db = get_db()
             db.execute(
